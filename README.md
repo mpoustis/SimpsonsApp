@@ -42,8 +42,8 @@ En el archivo EpisodeRemoteMediator.kt -linea 31- en REFRESH, la pagina se calcu
 Para eso se debe usar LoadType.REFRESH -> 1
 
 ERROR 7:
-En el archivo MainScreen.kt -linea 96- la lista usa LazyRow generando un error de UX al aparecer los episodios apilados horizontalmente, lo cual hace que el contenido sea inutilizable
-Ademas, en el mismo archivo ya se usa un Row horizontal para el selector de episodios-lineas 78–97- por lo que tener tambien la lista principal horizontal genera una superposicion confusa de dos scrolls horizontales
+En el archivo MainScreen.kt -linea 96- la lista usa LazyRow generando un error de UX al aparecer los episodios apilados horizontalmente, lo cual hace que el contenido sea inutilizable Ademas, en el mismo archivo ya se usa un Row horizontal para el selector de episodios-lineas 78–97- por lo que tener tambien la lista principal horizontal genera una superposicion confusa de dos scrolls horizontales
+Para arreglarlo, se debe utilizar LazyColumn
 
 ERROR 8: 
 En el archivo MainScreen.kt -linea 51 a 53- el view.Model.refreshSeasons() se llama directo en el cuerpo de composable. Esto es un efecto secundario que puede ejecutarse en cada recomposicion sin la necesidad de que este en el composabe 
